@@ -12,7 +12,7 @@ class App extends React.Component {
       <Router>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#" target="_blank">
+            <a className="navbar-brand" href="/" target="_blank">
               <img src={logo} alt="logo" width="30" height="30" />
             </a>
             <Link to="/" className="navbar-brand">
