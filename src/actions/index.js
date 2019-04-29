@@ -10,3 +10,14 @@ export function fetchTodos() {
     });
   };
 }
+
+export function createTodo(formValues) {
+  return dispatch => {
+    axios.post("http://localhost:5000/todos/new", formValues).then(response => {
+      dispatch({
+        type: "CREATE_TODO",
+        payload: response.data
+      });
+    });
+  };
+}
