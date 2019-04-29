@@ -3,7 +3,9 @@ export const todosReducer = (state = [], action) => {
     case "FETCH_TODOS":
       return action.payload;
     case "CREATE_TODO":
-      return [action.payload]
+      return [action.payload];
+    case "FETCH_TODO":
+      return [action.payload];
     default:
       return state;
   }

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../pencil.svg";
 import TodoList from "./TodoList";
 import TodoNew from "./TodoNew";
+import TodoShow from "./TodoShow";
 import TodoEdit from "./TodoEdit";
 
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
           </nav>
           <Route exact path="/" component={TodoList} />
           <Route exact path="/new" component={TodoNew} />
+          <Route exact path="/:id" component={TodoShow} />
           <Route exact path="/edit/:id" component={TodoEdit} />
         </div>
       </Router>
