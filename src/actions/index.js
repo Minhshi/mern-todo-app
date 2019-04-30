@@ -66,3 +66,15 @@ export function editTodo(todo, formValues) {
       .then(response => console.log(response.data));
   };
 }
+
+export function deleteTodo(id) {
+  return dispatch => {
+    axios.delete(`http://localhost:5000/todos/delete/${id}`).then(response => {
+      dispatch({
+        type: "DELETE_TODO",
+        payload: id
+      });
+      // console.log(id)
+    });
+  };
+}
