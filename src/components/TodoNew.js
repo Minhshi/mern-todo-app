@@ -41,7 +41,7 @@ class TodoNew extends React.Component {
 }
 
 export default reduxForm({
-  form: "todoForm"
+  form: "newTodoForm"
 })(
   connect(
     null,

@@ -35,3 +35,34 @@ export function fetchTodo(id) {
     });
   };
 }
+
+// export function editTodo(todo, formValues) {
+//   return dispatch => {
+//     axios
+//       .patch(`http://localhost:5000/todos/edit/${todo._id}`, formValues
+//       )
+//       .then(response => {
+//         // dispatch({
+//         //   type: "EDIT_TODO",
+//         //   payload: response.data
+//         // });
+//         console.log(response.data);
+//       });
+//   };
+// }
+
+export function editTodo(todo, formValues) {
+  return dispatch => {
+    axios
+      .patch(
+        `http://localhost:5000/todos/edit/${todo._id}`,
+        {
+          title: todo.title,
+          description: todo.description,
+          completed: todo.completed
+        },
+        formValues
+      )
+      .then(response => console.log(response.data));
+  };
+}

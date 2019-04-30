@@ -8,7 +8,7 @@ class TodoShow extends React.Component {
     this.props.fetchTodo(this.props.match.params.id);
   }
   render() {
-    console.log(this.props.todo);
+    // console.log(this.props.todo);
     if (!this.props.todo) {
       return null;
     }
